@@ -1,0 +1,5 @@
+TODO:
+- add cocoapods
+- clean up code 
+- add limitation of displaying tiles according to available screen space
+- add configuration protocol for tiles manager
