@@ -66,7 +66,7 @@ class RHPreviewTilesContainerView: UIView {
     }
     
     func reloadTiles(withNew newTiles: [RHPreviewTileView]) {
-        _ = tiles.map { $0.removeFromSuperview() }
+        removeTilesFromSuperview()
         tiles.removeAll()
         
         tiles = newTiles
@@ -105,6 +105,10 @@ private extension RHPreviewTilesContainerView {
             $0.hidden = true
             $0.alpha = 0
         }
+    }
+    
+    func removeTilesFromSuperview() {
+        _ = tiles.map { $0.removeFromSuperview() }
     }
     
     func layoutTiles() {
