@@ -10,7 +10,7 @@ I envied so much Spotify iOS app this great playlist preview cell 😍, I decide
 
 ## Play with it 😎
 <p align="center">
-<img src ="./ReadmeAssets/first_video.gif" width="330" height="250"/>
+<img src ="./ReadmeAssets/first_video.gif" width="360" height="250"/>
 </p>
 
 ## Installation
