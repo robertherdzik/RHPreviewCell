@@ -1,4 +1,5 @@
 import UIKit
+import RHPreviewCell
 
 class ViewController: UIViewController {
     

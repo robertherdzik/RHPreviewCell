@@ -10,16 +10,16 @@ import UIKit
 
 typealias RHTilesAnimationComplitionBlock = ()->()
 
-enum RHTappedTileIndexValue {
+public enum RHTappedTileIndexValue {
     case TileTapped(Int)
     case FingerReleased
 }
 
-protocol RHPreviewCellDelegate: class {
-    func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue)
+public protocol RHPreviewCellDelegate: class {
+   func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue)
 }
 
-protocol RHPreviewCellDataSource: class {
+public protocol RHPreviewCellDataSource: class {
     func previewCellNumberOfTiles(cell: RHPreviewTableViewCell) -> Int
     func previewCell(cell: RHPreviewTableViewCell, tileForIndex: Int) -> RHPreviewTileView
 }

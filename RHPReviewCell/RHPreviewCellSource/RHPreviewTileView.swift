@@ -14,7 +14,7 @@ protocol RHPreviewTileViewProtocol {
     func setSeleted(isSelected :Bool)
 }
 
-class RHPreviewTileView: UIImageView {
+public class RHPreviewTileView: UIImageView {
     private(set) var isSelected = false
     
     func setSeleted(isSelected :Bool) {
