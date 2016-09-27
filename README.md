@@ -73,8 +73,10 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 
 ... as you can see delegate method as a argument takes ``` RHTappedTileIndexValue``` , yup... it is swift enum using which you will gather information about tapped tile (```.TileTapped(let index)``` ) or even whether user released his finger out of tiles area (```.FingerReleased``` ).
 
-
-
+## Swift support
+| Library ver| Swift ver| 
+| ------------- |:-------------:| 
+| 1.0.0   | 2.3 | 
 
 ## Check the Demo project 
 
