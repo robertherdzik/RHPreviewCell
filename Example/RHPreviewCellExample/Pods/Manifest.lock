@@ -1,0 +1,16 @@
+PODS:
+  - RHPreviewCell (1.0.0)
+
+DEPENDENCIES:
+  - RHPreviewCell (from `/Users/robertherdzik/Workspace/GitHub/RHProjects/RHPreviewCell`)
+
+EXTERNAL SOURCES:
+  RHPreviewCell:
+    :path: "/Users/robertherdzik/Workspace/GitHub/RHProjects/RHPreviewCell"
+
+SPEC CHECKSUMS:
+  RHPreviewCell: 03011bcca594efbee11bbbca33f9581d2cf81be3
+
+PODFILE CHECKSUM: af990cbd665e862870ff82fc3bac225309cf1d71
+
+COCOAPODS: 1.0.1

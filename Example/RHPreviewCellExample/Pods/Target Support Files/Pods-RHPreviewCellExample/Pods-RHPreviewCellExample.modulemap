@@ -1,0 +1,6 @@
+framework module Pods_RHPreviewCellExample {
+  umbrella header "Pods-RHPreviewCellExample-umbrella.h"
+
+  export *
+  module * { export * }
+}

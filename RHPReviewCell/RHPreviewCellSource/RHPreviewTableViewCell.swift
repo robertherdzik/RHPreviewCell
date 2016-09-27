@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RHPreviewTableViewCell: UITableViewCell {
+public class RHPreviewTableViewCell: UITableViewCell {
     private var tilesManagerView: RHPreviewTilesContainerView!
     
-    weak var delegate: RHPreviewCellDelegate?
-    weak var dataSource: RHPreviewCellDataSource?
+    public weak var delegate: RHPreviewCellDelegate?
+    public weak var dataSource: RHPreviewCellDataSource?
     
     var pressDuration = CFTimeInterval(0.4)
     
@@ -22,7 +22,7 @@ class RHPreviewTableViewCell: UITableViewCell {
         addGesture()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:RHPReviewCell.xcodeproj">
+      location = "self:RHPreviewCellExample.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,6 @@
+framework module RHPreviewCell {
+  umbrella header "RHPreviewCell-umbrella.h"
+
+  export *
+  module * { export * }
+}
