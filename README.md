@@ -1,3 +1,5 @@
+![alt tag](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)
+
 # RHPreviewCell 🌶
 I envied so much Spotify iOS app this great playlist preview cell 😍, I decided to create my own one 🌶. Now you can give your users ability to quick check "what content is hidden under your UITableViewCell". Great think is that this Library not requires 3D Touch support from user device💥.
 
@@ -5,6 +7,13 @@ I envied so much Spotify iOS app this great playlist preview cell 😍, I decide
 <p align="center">
 <img src ="./ReadmeAssets/first_video.gif" width="330" height="250"/>
 </p>
+
+## Installation
+You can install RHPreviewCell library using Cocoapods:
+```
+pod 'RHPreviewCell'
+```
+or you can simply copy ```RHPreviewCellSource``` folder to your project.
 
 ## Usage
 To fully integrate RHPreviewCell with your Table View you just need to use RHPreviewCell like normal UITableViewCell in terms of your TableView data source 'cellForRowAtIndexPath' method. 
@@ -22,7 +31,7 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
     return cell
 }
 ```
-💡 Important think is that your View Controller needs to comform to 'RHPreviewCellDataSource' and 'RHPreviewCellDelegate' protocols. In that way you will be able to provide all neccesary data for RHPreviewCell tiles.
+💡 Important think is that your View Controller needs to comform to ``` RHPreviewCellDataSource```  and ``` RHPreviewCellDelegate```  protocols. In that way you will be able to provide all neccesary data for ``` RHPreviewTalveViewCell```  tiles.
 
 ### RHPreviewCellDataSource
 ```swift
@@ -42,7 +51,7 @@ And thats it! 💥  You have already integrete Library with your Table View 🎉
 
 ## Implementation hint from me
 ### [Q] How may look like tiles communiacation with my class❓🤔
-As I sad using 'RHPreviewCellDelegate'. I will show you how to handle it for particular cell:
+As I sad using ``` RHPreviewCellDelegate``` . I will show you how to handle it for particular cell:
 
 ```swift
 func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue) {
@@ -57,7 +66,7 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 }
 ```
 
-... as you can see delegate method as a argument takes 'RHTappedTileIndexValue', yup... it is swift enum using which you will gather information about tapped tile ('TileTapped(let index)') or even whether user released his finger out of tiles area ('FingerReleased').
+... as you can see delegate method as a argument takes ``` RHTappedTileIndexValue``` , yup... it is swift enum using which you will gather information about tapped tile (```.TileTapped(let index)``` ) or even whether user released his finger out of tiles area (```.FingerReleased``` ).
 
 
 
