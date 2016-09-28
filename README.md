@@ -2,7 +2,8 @@
 <img src ="./ReadmeAssets/RHPreviewCellHeadLogo.png" width="800" height="300"/>
 </p>
 
-![alt tag](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)
+
+[![alt tag](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](https://cocoapods.org/?q=rhpreviewcell)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
 
 # RHPreviewCell 🌶
