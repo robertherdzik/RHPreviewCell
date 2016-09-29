@@ -43,10 +43,10 @@ class RHPreviewTableViewCellTilesAnimator: RHPreviewTableViewCellTilesAnimationP
         UIView.animateWithDuration(0.5,
                                    delay: 0,
                                    usingSpringWithDamping: 0.4,
-                                   initialSpringVelocity: 0.2,
+                                   initialSpringVelocity: 0.9,
                                    options: UIViewAnimationOptions.CurveEaseInOut,
                                    animations: {
-                                    let scale = CGFloat(0.8)
+                                    let scale = CGFloat(0.89)
                                     tile.transform = CGAffineTransformMakeScale(scale, scale)
             }, completion: nil)
     }

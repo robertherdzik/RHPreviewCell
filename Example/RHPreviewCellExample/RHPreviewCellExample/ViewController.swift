@@ -85,6 +85,7 @@ extension ViewController: UITableViewDataSource {
         cell.delegate = self
         cell.dataSource = self
         cell.textLabel?.text = mockModel.cells[indexPath.row].title
+        cell.textLabel?.font = UIFont(name: "Didot", size: 20)
         
         return cell
     }
