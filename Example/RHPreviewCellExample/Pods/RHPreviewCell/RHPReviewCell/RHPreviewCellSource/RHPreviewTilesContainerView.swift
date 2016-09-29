@@ -112,9 +112,9 @@ private extension RHPreviewTilesContainerView {
     }
     
     func layoutTiles() {
-        let horizontalSpacing = CGFloat(1)
-        let tileOffset = CGFloat(0)
-        var prevTileMaxX = tileOffset
+        let horizontalSpacing = CGFloat(2)
+        let tileOffset = CGFloat(-4)
+        var prevTileMaxX = horizontalSpacing
         for tile in tiles {
             let tileBorderSize = bounds.height + tileOffset
             let frame = CGRect(x: prevTileMaxX, y: -tileOffset/2, width: tileBorderSize, height: tileBorderSize)

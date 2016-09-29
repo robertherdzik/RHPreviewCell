@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let mainVC = ViewController(withMock: RHMockCellsModel())
         mainVC.title = "RHPreviewCell"
+
         let navigationController = UINavigationController(rootViewController: mainVC)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
