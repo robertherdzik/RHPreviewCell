@@ -57,7 +57,7 @@ And thats it! 💥  You have already integrete Library with your Table View 🎉
 
 ## Implementation hint from me
 ### [Q] How may look like tiles communiacation with my class❓🤔
-As I sad using ``` RHPreviewCellDelegate``` . I will show you how to handle it for particular cell:
+As I said using ``` RHPreviewCellDelegate``` . I will show you how to handle it for particular cell:
 
 ```swift
 func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue) {
