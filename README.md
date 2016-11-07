@@ -37,7 +37,7 @@ func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexP
     return cell
 }
 ```
-💡 Important think is that your View Controller needs to comform to ``` RHPreviewCellDataSource```  and ``` RHPreviewCellDelegate```  protocols. In that way you will be able to provide all neccesary data for ``` RHPreviewTalveViewCell```  tiles.
+💡 Important thing is that your View Controller needs to comform to ``` RHPreviewCellDataSource```  and ``` RHPreviewCellDelegate```  protocols. In that way you will be able to provide all neccesary data for ``` RHPreviewTalveViewCell```  tiles.
 
 ### RHPreviewCellDataSource
 ```swift
@@ -77,7 +77,9 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 ## Swift support
 | Library ver| Swift ver| 
 | ------------- |:-------------:| 
-| 1.0.0   | 2.3 | 
+| 1.0.1   | 2.2 |
+
+
 
 ## Check the Demo project 
 
