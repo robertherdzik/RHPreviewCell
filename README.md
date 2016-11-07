@@ -78,6 +78,7 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 | Library ver| Swift ver| 
 | ------------- |:-------------:| 
 | 1.0.1   | 2.2 |
+| 1.0.2   | 2.3 |
 
 
 
