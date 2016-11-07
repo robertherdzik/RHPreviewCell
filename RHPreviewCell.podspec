@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "RHPreviewCell"
-s.version      = "1.0.1"
+s.version      = "1.0.2"
 s.summary      = "Now you can add extra feature to your TableViewCell, which provides your users to preview content behind the cell."
 s.description  = "Now you can add extra feature to your TableViewCell, which provides your users to preview content behind the cell."
 s.homepage     = "https://github.com/robertherdzik/RHPreviewCell"
