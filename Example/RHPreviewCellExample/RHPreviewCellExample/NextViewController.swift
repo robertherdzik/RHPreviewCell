@@ -23,7 +23,7 @@ class NextViewController: UIViewController {
         return view as! NextView
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
     }
@@ -31,12 +31,12 @@ class NextViewController: UIViewController {
 
 class NextView: UIView {
 
-    let loadSpinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    let loadSpinner = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     
     init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         
         addSubview(loadSpinner)
         loadSpinner.startAnimating()

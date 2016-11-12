@@ -10,7 +10,7 @@ class MainControllerView: UIView {
         tableView.frame = bounds
     }
     
-    func set(tableView tableView: UITableView) {
+    func set(tableView: UITableView) {
         self.tableView = tableView
         
         addSubview(self.tableView)

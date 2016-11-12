@@ -3,8 +3,8 @@ import RHPreviewCell
 
 class ViewController: UIViewController {
     
-    private let reuseCellIdentifier = "RHPreviewCell_id"
-    private let mockModel: RHMockCellsModel
+    fileprivate let reuseCellIdentifier = "RHPreviewCell_id"
+    fileprivate let mockModel: RHMockCellsModel
     
     init(withMock mock: RHMockCellsModel) {
         mockModel = mock
@@ -26,44 +26,44 @@ class ViewController: UIViewController {
         view = MainControllerView()
     }
     
-    private func castView() -> MainControllerView {
+    fileprivate func castView() -> MainControllerView {
         return view as! MainControllerView
     }
     
     func setupTableView() {
-        let tableView = UITableView(frame: CGRectZero, style: .Grouped)
-        tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        let tableView = UITableView(frame: CGRect.zero, style: .grouped)
+        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.registerClass(RHPreviewTableViewCell.classForCoder(), forCellReuseIdentifier: reuseCellIdentifier)
+        tableView.register(RHPreviewTableViewCell.classForCoder(), forCellReuseIdentifier: reuseCellIdentifier)
         
         castView().set(tableView: tableView)
     }
     
-    private func pushNextViewController() {
+    fileprivate func pushNextViewController() {
         let nextVC = NextViewController()
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    private func presentDetailsViewController(withImage image: UIImage) {
+    fileprivate func presentDetailsViewController(withImage image: UIImage) {
         let detailsVC = DetailsViewController(withImage: image)
-        let dismissButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(dismiss))
+        let dismissButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissDetailController))
         let navController = UINavigationController(rootViewController: detailsVC)
         detailsVC.navigationItem.rightBarButtonItem = dismissButton
         
-        presentViewController(navController, animated: true, completion: nil)
+        present(navController, animated: true, completion: nil)
     }
     
-    @objc private func dismiss() {
-        dismissViewControllerAnimated(true, completion: nil)
+    @objc fileprivate func dismissDetailController() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
 extension ViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         pushNextViewController()
     }
@@ -71,17 +71,17 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mockModel.cells.count
     }
 
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(65)
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseCellIdentifier) as! RHPreviewTableViewCell
-        cell.accessoryType = .DisclosureIndicator
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseCellIdentifier) as! RHPreviewTableViewCell
+        cell.accessoryType = .disclosureIndicator
         cell.delegate = self
         cell.dataSource = self
         cell.textLabel?.text = mockModel.cells[indexPath.row].title
@@ -93,18 +93,18 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: RHPreviewCellDelegate {
     
-    func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue) {
-        let cellIndex = castView().tableView.indexPathForCell(cell)!.row
+    func previewCell(_ cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue) {
+        let cellIndex = castView().tableView.indexPath(for: cell)!.row
         
         switch indexValue {
-        case .TileTapped(let index):
+        case .tileTapped(let index):
             print("😲 \(index) has been selected")
             
             let tiles = mockModel.cells[cellIndex].tiles
             let tileItem = tiles[index]
             
             presentDetailsViewController(withImage: tileItem.image)
-        case .FingerReleased:
+        case .fingerReleased:
             print("🖖🏽 Finger has been relesed")
         }
     }
@@ -112,19 +112,19 @@ extension ViewController: RHPreviewCellDelegate {
 
 extension ViewController: RHPreviewCellDataSource {
     
-    func previewCellNumberOfTiles(cell: RHPreviewTableViewCell) -> Int {
-        let cellIndex = castView().tableView.indexPathForCell(cell)!.row
+    func previewCellNumberOfTiles(_ cell: RHPreviewTableViewCell) -> Int {
+        let cellIndex = castView().tableView.indexPath(for: cell)!.row
         let tiles = mockModel.cells[cellIndex].tiles
         
         return tiles.count
     }
     
-    func previewCell(cell: RHPreviewTableViewCell, tileForIndex: Int) -> RHPreviewTileView {
-        let cellIndex = castView().tableView.indexPathForCell(cell)!.row
+    func previewCell(_ cell: RHPreviewTableViewCell, tileForIndex: Int) -> RHPreviewTileView {
+        let cellIndex = castView().tableView.indexPath(for: cell)!.row
         let tiles = mockModel.cells[cellIndex].tiles
         let tileItem = tiles[tileForIndex]
         
-        let tile = RHPreviewTileView(frame: CGRectZero)
+        let tile = RHPreviewTileView(frame: CGRect.zero)
         tile.image = tileItem.image
         
         return tile

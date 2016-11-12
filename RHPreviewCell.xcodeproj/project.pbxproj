@@ -329,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = x.RHPReviewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -347,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = x.RHPReviewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class RHPreviewTableViewCell: UITableViewCell {
-    private var tilesManagerView: RHPreviewTilesContainerView!
+open class RHPreviewTableViewCell: UITableViewCell {
+    fileprivate var tilesManagerView: RHPreviewTilesContainerView!
     
-    public weak var delegate: RHPreviewCellDelegate?
-    public weak var dataSource: RHPreviewCellDataSource?
+    open weak var delegate: RHPreviewCellDelegate?
+    open weak var dataSource: RHPreviewCellDataSource?
     
     var pressDuration = CFTimeInterval(0.4)
     
@@ -26,7 +26,7 @@ public class RHPreviewTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func fulfilTilesContent() {
+    fileprivate func fulfilTilesContent() {
         guard let numberOfTiles = dataSource?.previewCellNumberOfTiles(self) else {
             assertionFailure("previewCellNumberOfTiles not implemented 😥")
             return
@@ -42,60 +42,63 @@ public class RHPreviewTableViewCell: UITableViewCell {
         tilesManagerView.reloadTiles(withNew: newTiles)
     }
     
-    private func addGesture() {
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(triggerLongPress))
-        longPressGesture.minimumPressDuration = pressDuration
-        
-        contentView.addGestureRecognizer(longPressGesture)
-    }
-    
-    private func creteTilesPresenterIfNecessary() {
-        if tilesManagerView != nil { return }
-        
-        tilesManagerView = RHPreviewTilesContainerView(frame: bounds)
-        tilesManagerView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.15)
-        contentView.addSubview(tilesManagerView!)
-        
-        fulfilTilesContent()
-    }
-    
-    private func showTiles(completion: RHTilesAnimationComplitionBlock) {
-        tilesManagerView.hidden = false
-        tilesManagerView.showElements(completion)
-    }
-    
-    private func hideTiles() {
-        tilesManagerView.hideElements { [weak self] in self?.tilesManagerView.hidden = true }
-    }
-    
-    private func passFingerPositionToPresenter(from recognizer: UILongPressGestureRecognizer) {
-        let fingerPosition = recognizer.locationInView(contentView)
-        tilesManagerView.gestureOffset(fingerPosition)
-    }
-    
-    private func getSelectedTileIndexValue() -> RHTappedTileIndexValue {
-        if tilesManagerView.selectedTileIndex < 0 {
-            return RHTappedTileIndexValue.FingerReleased
-        } else {
-            return RHTappedTileIndexValue.TileTapped(tilesManagerView.selectedTileIndex)
-        }
-    }
-    
-    func triggerLongPress(recognizer: UILongPressGestureRecognizer) {
+    func triggerLongPress(with recognizer: UILongPressGestureRecognizer) {
         creteTilesPresenterIfNecessary()
         
         switch recognizer.state {
-        case .Began:
+        case .began:
             showTiles { [weak self] in self?.passFingerPositionToPresenter(from: recognizer) }
-        case .Changed:
+        case .changed:
             passFingerPositionToPresenter(from: recognizer)
-        case .Cancelled, .Ended, .Failed:
+        case .cancelled, .ended, .failed:
             
             delegate?.previewCell(self, didSelectTileAtIndex: getSelectedTileIndexValue())
             hideTiles()
             
         default:
             print("default")
+        }
+    }
+}
+
+private extension RHPreviewTableViewCell {
+    
+    func addGesture() {
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(triggerLongPress))
+        longPressGesture.minimumPressDuration = pressDuration
+        
+        contentView.addGestureRecognizer(longPressGesture)
+    }
+    
+    func creteTilesPresenterIfNecessary() {
+        if tilesManagerView != nil { return }
+        
+        tilesManagerView = RHPreviewTilesContainerView(frame: bounds)
+        tilesManagerView.backgroundColor = UIColor.black.withAlphaComponent(0.15)
+        contentView.addSubview(tilesManagerView!)
+        
+        fulfilTilesContent()
+    }
+    
+    func showTiles(with completion: @escaping RHTilesAnimationComplitionBlock) {
+        tilesManagerView.isHidden = false
+        tilesManagerView.showElements(with: completion)
+    }
+    
+    func hideTiles() {
+        tilesManagerView.hideElements { [weak self] in self?.tilesManagerView.isHidden = true }
+    }
+    
+    func passFingerPositionToPresenter(from recognizer: UILongPressGestureRecognizer) {
+        let fingerPosition = recognizer.location(in: contentView)
+        tilesManagerView.gestureOffset(fingerPosition)
+    }
+    
+    func getSelectedTileIndexValue() -> RHTappedTileIndexValue {
+        if tilesManagerView.selectedTileIndex < 0 {
+            return RHTappedTileIndexValue.fingerReleased
+        } else {
+            return RHTappedTileIndexValue.tileTapped(tilesManagerView.selectedTileIndex)
         }
     }
 }
