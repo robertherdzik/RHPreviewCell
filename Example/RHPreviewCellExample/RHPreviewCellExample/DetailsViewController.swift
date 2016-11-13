@@ -2,7 +2,7 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
-    private let image: UIImage
+    fileprivate let image: UIImage
     
     init(withImage image: UIImage) {
         self.image = image
@@ -22,7 +22,7 @@ class DetailsViewController: UIViewController {
         return view as! DetailsView
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         showImage()
@@ -32,20 +32,20 @@ class DetailsViewController: UIViewController {
         castView().imageView.alpha = 0
         castView().setImage(image)
       
-        UIView.animateWithDuration(0.2) { [weak self] in
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
             self?.castView().imageView.alpha = 1
-        }
+        }) 
     }
 }
 
 class DetailsView: UIView {
     
-    private let imageView = UIImageView()
+    fileprivate let imageView = UIImageView()
     
     init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
 
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.white
         addSubview(imageView)
     }
     
@@ -57,11 +57,11 @@ class DetailsView: UIView {
         super.layoutSubviews()
         
         let edgeSize = CGFloat(300)
-        imageView.frame = CGRectMake(0, 0, edgeSize, edgeSize)
+        imageView.frame = CGRect(x: 0, y: 0, width: edgeSize, height: edgeSize)
         imageView.center = center
     }
     
-    func setImage(image: UIImage) {
+    func setImage(_ image: UIImage) {
         imageView.image = image
     }
 }

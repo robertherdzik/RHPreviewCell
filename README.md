@@ -22,15 +22,15 @@ pod 'RHPreviewCell'
 or you can simply copy ```RHPreviewCellSource``` folder to your project.
 
 ## Usage
-To fully integrate RHPreviewCell with your Table View you just need to use RHPreviewCell like normal UITableViewCell in terms of your TableView data source 'cellForRowAtIndexPath' method. 
+To fully integrate RHPreviewCell with your Table View you just need to use RHPreviewCell like normal UITableViewCell in terms of your TableView data source 'cellForRowAtIndexPath' method.
 
 ```swift
 func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    // Fetching already registered RHPreviewTableViewCell 
-    let cell = tableView.dequeueReusableCellWithIdentifier(reuseCellIdentifier) as! RHPreviewTableViewCell 
+    // Fetching already registered RHPreviewTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(reuseCellIdentifier) as! RHPreviewTableViewCell
 
     // Delegate using which, tiles will talk to your class
-    cell.delegate = self 
+    cell.delegate = self
     // Data source for feed small tiles 🚼
     cell.dataSource = self
 
@@ -49,7 +49,7 @@ func previewCell(cell: RHPreviewTableViewCell, tileForIndex: Int) -> RHPreviewTi
 ```swift
 func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue)
 ```
-And thats it! 💥  You have already integrete Library with your Table View 🎉 
+And thats it! 💥  You have already integrete Library with your Table View 🎉
 
 <p align="center">
 <img src ="./ReadmeAssets/second_video.gif" width="360" height="640" align="center"/>
@@ -75,13 +75,14 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 ... as you can see delegate method as a argument takes ``` RHTappedTileIndexValue``` , yup... it is swift enum using which you will gather information about tapped tile (```.TileTapped(let index)``` ) or even whether user released his finger out of tiles area (```.FingerReleased``` ).
 
 ## Swift support
-| Library ver| Swift ver| 
-| ------------- |:-------------:| 
+| Library ver| Swift ver|
+| ------------- |:-------------:|
 | 1.0.1   | 2.2 |
 | 1.0.2   | 2.3 |
+| 1.0.3   | 3.0 |
 
 
 
-## Check the Demo project 
+## Check the Demo project
 
 Please check out the demo project, you can see there how Library has been implemented in details.

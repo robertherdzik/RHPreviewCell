@@ -5,9 +5,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
        
-        let windowFrame = UIScreen.mainScreen().bounds
+        let windowFrame = UIScreen.main.bounds
         window = UIWindow(frame: windowFrame)
 
         let mainVC = ViewController(withMock: RHMockCellsModel())

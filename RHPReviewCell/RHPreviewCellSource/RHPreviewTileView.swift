@@ -11,13 +11,13 @@ import UIKit
 protocol RHPreviewTileViewProtocol {
     var isSelected: Bool { get }
     
-    func setSeleted(isSelected :Bool)
+    func setSeleted(_ isSelected :Bool)
 }
 
-public class RHPreviewTileView: UIImageView {
-    private(set) var isSelected = false
+open class RHPreviewTileView: UIImageView {
+    fileprivate(set) var isSelected = false
     
-    func setSeleted(isSelected :Bool) {
+    func setSeleted(_ isSelected :Bool) {
         self.isSelected = isSelected
         
         alpha = isSelected ? CGFloat(1) : CGFloat(0.2)
