@@ -1,5 +1,5 @@
 TODO:
-[DONE] add cocoapods
-- clean up code 
+- clean up code (add more verbose delegate/dataSource methods)
+- add documentation for methods
 - add limitation of displaying tiles according to available screen space
 - add configuration protocol for tiles manager
