@@ -3,7 +3,8 @@
 </p>
 
 
-[![alt tag](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](https://cocoapods.org/?q=rhpreviewcell)
+[![Version](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](http://cocoadocs.org/docsets/RHPreviewCell)
+[![Platform](https://img.shields.io/cocoapods/p/RHPreviewCell.svg?style=flat)](http://cocoadocs.org/docsets/RHPreviewCell)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
 
 # RHPreviewCell 🌶
