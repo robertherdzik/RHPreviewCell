@@ -2,9 +2,10 @@
 <img src ="./ReadmeAssets/RHPreviewCellHeadLogo.png" width="800" height="300"/>
 </p>
 
-
-[![alt tag](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](https://cocoapods.org/?q=rhpreviewcell)
+[![Version](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](http://cocoadocs.org/docsets/RHPreviewCell)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
+[![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat)](https://developer.apple.com/iphone/index.action)
+[![Language](http://img.shields.io/badge/language-swift-brightgreen.svg?style=flat)](https://developer.apple.com/swift)
 
 # RHPreviewCell 🌶
 I envied so much Spotify iOS app this great playlist preview cell 😍, I decided to create my own one 🌶. Now you can give your users ability to quick check "what content is hidden under your UITableViewCell". Great think is that this Library not requires 3D Touch support from user device💥.
