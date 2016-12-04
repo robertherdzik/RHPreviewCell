@@ -1,6 +1,4 @@
-<p align="center">
-<img src ="./ReadmeAssets/RHPreviewCellHeadLogo.png" width="800" height="300"/>
-</p>
+![](./ReadmeAssets/RHPreviewCellHeadLogo.png)
 
 [![Version](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](http://cocoadocs.org/docsets/RHPreviewCell)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
