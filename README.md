@@ -85,3 +85,6 @@ func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: 
 ## Check the Demo project
 
 Please check out the demo project, you can see there how Library has been implemented in details.
+
+## Todo
+- [ ] migrate to Swift 4 
