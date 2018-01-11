@@ -1,19 +1,19 @@
 //
-//  RHPReviewCell.h
-//  RHPReviewCell
+//  RHPreviewCell.h
+//  RHPreviewCell
 //
-//  Created by Robert Herdzik on 27/09/2016.
-//  Copyright © 2016 Robert Herdzik. All rights reserved.
+//  Created by Robert Herdzik on 11/01/2018.
+//  Copyright © 2018 Robert Herdzik. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for RHPReviewCell.
-FOUNDATION_EXPORT double RHPReviewCellVersionNumber;
+//! Project version number for RHPreviewCell.
+FOUNDATION_EXPORT double RHPreviewCellVersionNumber;
 
-//! Project version string for RHPReviewCell.
-FOUNDATION_EXPORT const unsigned char RHPReviewCellVersionString[];
+//! Project version string for RHPreviewCell.
+FOUNDATION_EXPORT const unsigned char RHPreviewCellVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <RHPReviewCell/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <RHPreviewCell/PublicHeader.h>
 
 
