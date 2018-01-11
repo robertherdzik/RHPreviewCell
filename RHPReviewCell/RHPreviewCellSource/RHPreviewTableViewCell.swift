@@ -42,7 +42,7 @@ open class RHPreviewTableViewCell: UITableViewCell {
         tilesManagerView.reloadTiles(withNew: newTiles)
     }
     
-    func triggerLongPress(with recognizer: UILongPressGestureRecognizer) {
+    @objc func triggerLongPress(with recognizer: UILongPressGestureRecognizer) {
         creteTilesPresenterIfNecessary()
         
         switch recognizer.state {

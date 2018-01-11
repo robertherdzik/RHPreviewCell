@@ -144,11 +144,11 @@
 				TargetAttributes = {
 					B12B18121D9A5DD900F9AC35 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
-			buildConfigurationList = B12B180D1D9A5DD900F9AC35 /* Build configuration list for PBXProject "RHPReviewCell" */;
+			buildConfigurationList = B12B180D1D9A5DD900F9AC35 /* Build configuration list for PBXProject "RHPreviewCell" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -329,7 +329,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = x.RHPReviewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -347,14 +348,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = x.RHPReviewCell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B12B180D1D9A5DD900F9AC35 /* Build configuration list for PBXProject "RHPReviewCell" */ = {
+		B12B180D1D9A5DD900F9AC35 /* Build configuration list for PBXProject "RHPreviewCell" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B12B18191D9A5DD900F9AC35 /* Debug */,
