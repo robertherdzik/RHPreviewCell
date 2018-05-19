@@ -1,4 +1,4 @@
-![](./ReadmeAssets/RHPreviewCellHeadLogo.png)
+![](./ReadmeAssets/RHPreviewCellHeadLogo.gif)
 
 [![Version](https://img.shields.io/cocoapods/v/RHPreviewCell.svg?style=flat)](http://cocoadocs.org/docsets/RHPreviewCell)
 [![License](https://img.shields.io/cocoapods/l/BadgeSwift.svg?style=flat)](/LICENSE)
@@ -10,7 +10,7 @@ I envied so much Spotify iOS app this great playlist preview cell 😍, I decide
 
 ## Play with it 😎
 <p align="center">
-<img src ="./ReadmeAssets/first_video.gif" width="360"/>
+<img src ="./ReadmeAssets/demo.gif" width="360"/>
 </p>
 
 ## Installation
