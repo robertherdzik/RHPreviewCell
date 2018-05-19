@@ -10,7 +10,7 @@ I envied so much Spotify iOS app this great playlist preview cell 😍, I decide
 
 ## Play with it 😎
 <p align="center">
-<img src ="./ReadmeAssets/first_video.gif" width="360" height="250"/>
+<img src ="./ReadmeAssets/first_video.gif" width="360"/>
 </p>
 
 ## Installation
@@ -49,10 +49,6 @@ func previewCell(cell: RHPreviewTableViewCell, tileForIndex: Int) -> RHPreviewTi
 func previewCell(cell: RHPreviewTableViewCell, didSelectTileAtIndex indexValue: RHTappedTileIndexValue)
 ```
 And thats it! 💥  You have already integrete Library with your Table View 🎉
-
-<p align="center">
-<img src ="./ReadmeAssets/second_video.gif" width="360" height="640" align="center"/>
-</p>
 
 ## Implementation hint from me
 ### [Q] How may look like tiles communiacation with my class❓🤔
